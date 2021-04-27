@@ -13,12 +13,13 @@ let prelude = "i'm a functional programming fan, and jack-of-all-trades.
                my background is in webdev, but i'm happy to explore anything."
 
 {- my personal data -}
-let Personal = { name : Text, city : Text, email : Text, web : Text, twitter : Text }
+let Personal = { name : Text, city : Text, email : Text, web : Text, twitter : Text, pgp : Text }
 let personal = Personal { name = "Hannah Vivian Shaw"
                         , city = "Burlington, Vermont"
                         , email = "hvivianshaw 'at' gmail.com"
                         , website = "vivshaw.github.io"
                         , twitter = "@vvvivshaw"
+                        , pgp = "61E55CA77554B474C30F04248F434E3AF84C4482"
                         }
 
 {- bio and interests -}
