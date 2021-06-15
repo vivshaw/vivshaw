@@ -8,7 +8,8 @@ import Home from "../_layouts/home";
  * and applies that specific layout to the page.
  */
 const LayoutFromFrontMatter = ({ pageContext, children }) => {
-  let Layout = React.Fragment;
+  // Default layout
+  let Layout = Article;
 
   if (pageContext.frontmatter.layout === "home") {
     Layout = Home;

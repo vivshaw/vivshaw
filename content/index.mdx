@@ -1,0 +1,46 @@
+---
+layout: home
+permalink: /
+title: Hannah Vivian Shaw
+excerpt: "I'm a Vermont developer working mainly in Javascript & Python. I'm into the React/Redux ecosystem, functional programming, and machine learning."
+image: tweeter-robo-teaser.png
+---
+
+import { graphql } from "gatsby";
+
+### Recent posts:
+
+<ul>
+  {props.data.blogPosts.edges.map(({ node }) => (
+    <li>
+      <a href={node.fields.slug}>{node.frontmatter.title}</a>
+    </li>
+  ))}
+</ul>
+
+export const pageQuery = graphql`
+  query {
+    blogPosts: allMdx(
+      filter: { fields: { slug: { regex: "/blog/" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 3
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            blurb
+          }
+          excerpt
+          timeToRead
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;

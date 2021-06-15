@@ -1,0 +1,50 @@
+---
+layout: archive
+title: "Portfolio"
+date: 2017-01-25T18:03:03-05:00
+modified:
+excerpt: "An archive of things I've been tinkering with"
+tags: []
+image: tweeter-robo-teaser.png
+---
+
+import { graphql } from "gatsby";
+import PostGrid from "../../src/_includes/post-grid";
+
+<div class="tiles">
+  {props.data.workPosts.edges.map(({ node }) => (
+    <PostGrid slug={node.fields.slug} frontmatter={node.frontmatter} />
+  ))}
+</div>
+
+export const pageQuery = graphql`
+  query {
+    workPosts: allMdx(
+      filter: { fields: { slug: { regex: "/blog/" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            blurb
+            image {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 250) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          excerpt
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;

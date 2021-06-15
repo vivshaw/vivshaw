@@ -1,74 +1,48 @@
+/* eslint-env node */
+
 module.exports = {
   siteMetadata: {
     title: `vivshaw.net`,
     description: `Hannah Vivian Shaw's portfolio`,
     author: `Hannah Vivian Shaw`,
     siteUrl: `https://vivshaw.net`,
-    year: 2017,
+    year: 2021,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-transformer-yaml`,
+    `gatsby-plugin-layout`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/static/assets`,
-        name: "assets",
-      },
-    },
-    {
+      // Content directory
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
         path: `${__dirname}/content/`,
       },
     },
-    `gatsby-transformer-yaml`,
     {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      // Data YAML files
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./src/_data/`,
       },
     },
+    // Sharp images
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `vivshaw.net`,
-        short_name: `vivshaw`,
-        start_url: `/`,
-        background_color: `#ec008c`,
-        theme_color: `#ec008c`,
-        display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/pages`,
-      },
-    },
+    // Remark settings
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
-          {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              name: "assets",
-            },
-          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -88,27 +62,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-layout`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-eslint`,
-    `gatsby-plugin-webpack-size`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true, // Print removed selectors and processed file names
-      },
-    },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://vivshaw.net`,
-      },
-    },
+    // MDX settings
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -124,6 +78,35 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `vivshaw.net`,
+        short_name: `vivshaw`,
+        start_url: `/`,
+        background_color: `#ec008c`,
+        theme_color: `#ec008c`,
+        display: `standalone`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-eslint`,
+    `gatsby-plugin-webpack-size`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://vivshaw.net`,
       },
     },
     {
