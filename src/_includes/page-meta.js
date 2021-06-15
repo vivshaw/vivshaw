@@ -1,6 +1,6 @@
 import React from "react";
 
-//FIXME: locales like original? format dates like original. and clarify structure
+//FIXME: format dates like original
 const PageMeta = ({ date = null, modified = null }) => {
   return (
     (date || modified) && (

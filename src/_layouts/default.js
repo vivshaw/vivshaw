@@ -1,16 +1,14 @@
 import React from "react";
 
-import BackgroundImage from "../_includes/background-image";
-import BrowserUpgrade from "../_includes/browser-upgrade";
-import Footer from "../_includes/footer";
-import Header from "../_includes/header";
+import BackgroundImage from "../components/BackgroundImage";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 //FIXME: add navigation-sliding
 const Default = ({ children }) => {
   return (
     <>
       <BackgroundImage slant />
-      <BrowserUpgrade />
       <Header />
       {/* include navigation-sliding.html */}
 

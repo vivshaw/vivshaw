@@ -7,14 +7,14 @@
 /* Slider */
 
 .slide {
-    transform: translateX(-100%);
-    @include media($medium) {
-      transform: translateX(em(-600));
-    }
-    @include media($large) {
-      transform: translateX(em(-900));
-    }
+  transform: translateX(-100%);
+  @include media($medium) {
+    transform: translateX(em(-600));
   }
+  @include media($large) {
+    transform: translateX(em(-900));
+  }
+}
 
 /*
    Sliding menu button
@@ -42,7 +42,9 @@
   transition: $sliding-menu-animation;
   &.slide {
     background: $danger-color;
-    transform: translateX(0); /* don't slide close button on small screens only */
+    transform: translateX(
+      0
+    ); /* don't slide close button on small screens only */
     @include media($medium) {
       transform: translateX(em(-600)); /* reset slide position */
     }
@@ -94,9 +96,9 @@
     }
     span {
       display: block;
-      @include font-size(32,no,1);
+      @include font-size(32, no, 1);
       @include media($small) {
-        @include font-size(48,no,1);
+        @include font-size(48, no, 1);
       }
       font-family: $base-font;
       text-transform: uppercase;
@@ -147,20 +149,20 @@
       display: block;
       margin-left: 60px;
       font-family: $alt-font;
-      @include font-size(24,no);
+      @include font-size(24, no);
       font-weight: 700;
       @include media($small) {
         margin-left: 170px;
-        @include font-size(32,no);
+        @include font-size(32, no);
       }
     }
     .excerpt {
       margin-top: 0;
       margin-left: 60px;
-      @include font-size(14,no);
+      @include font-size(14, no);
       @include media($small) {
         margin-left: 170px;
-        @include font-size(16,no);
+        @include font-size(16, no);
       }
     }
   }
@@ -168,9 +170,6 @@
     display: block;
     color: $white;
     font-style: italic;
-  }
-  .menu-item .home a {
-    @include font-size(32);
   }
 }
 

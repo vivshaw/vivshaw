@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import BackgroundImage from "../_includes/background-image";
-import BrowserUpgrade from "../_includes/browser-upgrade";
-import Footer from "../_includes/footer";
+import BackgroundImage from "../components/BackgroundImage";
+import Footer from "../components/Footer";
 
 const Home = ({ children }) => {
   return (
@@ -31,8 +30,6 @@ const Home = ({ children }) => {
       </div>
 
       <div id="page-wrapper">
-        <BrowserUpgrade />
-
         <div id="main" role="main">
           <div className="wrap">
             <div className="archive-wrap">

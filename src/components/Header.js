@@ -1,6 +1,6 @@
 import React from "react";
-import Breadcrumbs from "./breadcrumbs";
-import Navigation from "./navigation";
+import Breadcrumbs from "../_includes/breadcrumbs";
+import Navigation from "./Navigation";
 
 const Header = () => (
   <header id="masthead">

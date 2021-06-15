@@ -1,7 +1,7 @@
 import React from "react";
 import Archive from "../_layouts/archive";
 import Article from "../_layouts/article";
-import Home from "../_layouts/home";
+import Home from "../templates/home";
 
 /*
  * This wrapper component reads the "layout" parameter specified in each page's frontmatter,
