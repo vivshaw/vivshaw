@@ -96,7 +96,6 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-eslint`,
-    `gatsby-plugin-webpack-size`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
@@ -104,6 +103,7 @@ module.exports = {
         siteUrl: `https://vivshaw.net`,
       },
     },
+    /*
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -159,5 +159,6 @@ module.exports = {
         ],
       },
     },
+    */
   ],
 };
