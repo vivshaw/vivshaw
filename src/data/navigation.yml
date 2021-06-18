@@ -1,18 +1,13 @@
 # Site navigation links
 
-- title: Home
-  url: /
-  excerpt: 
-
 - title: Blog
   url: /blog/
-  excerpt:  
+  excerpt:
 
 - title: Work
   url: /work/
-  excerpt: 
-  
+  excerpt:
+
 - title: About
   url: /about/
-  excerpt: 
-  
+  excerpt:

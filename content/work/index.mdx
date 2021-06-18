@@ -20,7 +20,7 @@ import PostGrid from "../../src/_includes/post-grid";
 export const pageQuery = graphql`
   query {
     workPosts: allMdx(
-      filter: { fields: { slug: { regex: "/blog/" } } }
+      filter: { fields: { slug: { regex: "/work/" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       totalCount

@@ -1,7 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
-const Footer = ({ home = false }) => {
+interface FooterProps {
+  home?: boolean;
+}
+
+const Footer = ({ home = false }: FooterProps) => {
   const data = useStaticQuery(graphql`
     query FooterQuery {
       allFooterYaml {

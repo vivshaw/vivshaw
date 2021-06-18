@@ -4,13 +4,11 @@ import BackgroundImage from "../components/BackgroundImage";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-//FIXME: add navigation-sliding
-const Default = ({ children }) => {
+const Default: React.FC = ({ children }) => {
   return (
     <>
       <BackgroundImage slant />
       <Header />
-      {/* include navigation-sliding.html */}
 
       <div id="page-wrapper">
         {children}

@@ -1,13 +1,24 @@
 import React from "react";
-import Archive from "../_layouts/archive";
+import Archive from "../templates/archive";
 import Article from "../_layouts/article";
 import Home from "../templates/home";
+
+interface LayoutProps {
+  children: React.ReactNode;
+
+  pageContext: {
+    frontmatter: {
+      layout?: string;
+    };
+  };
+}
 
 /*
  * This wrapper component reads the "layout" parameter specified in each page's frontmatter,
  * and applies that specific layout to the page.
  */
-const LayoutFromFrontMatter = ({ pageContext, children }) => {
+//FIXME: Name this better
+const LayoutFromFrontMatter = ({ pageContext, children }: LayoutProps) => {
   // Default layout
   let Layout = Article;
 

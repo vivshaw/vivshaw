@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import SEO from "../components/Seo";
 
-const Layout = ({ children }) => (
+const Layout: React.FC = ({ children }) => (
   <>
     <SEO title="Hi!" />
 

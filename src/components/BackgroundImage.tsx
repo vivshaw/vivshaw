@@ -2,7 +2,12 @@ import classNames from "classnames";
 import React from "react";
 import bgImg from "../images/plant-691971_1280.jpg";
 
-const BackgroundImage = ({ slant }) => (
+//FIXME: Get index.d.ts to load right
+interface BackgroundImageProps {
+  slant?: boolean;
+}
+
+const BackgroundImage = ({ slant }: BackgroundImageProps) => (
   <>
     <img
       src={bgImg}

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import BackgroundImage from "../components/BackgroundImage";
 import Footer from "../components/Footer";
 
-const Home = ({ children }) => {
+const Home: React.FC = ({ children }) => {
   return (
     <>
       <BackgroundImage />

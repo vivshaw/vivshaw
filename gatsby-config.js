@@ -31,7 +31,7 @@ module.exports = {
       // Data YAML files
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/_data/`,
+        path: `./src/data/`,
       },
     },
     // Sharp images
@@ -67,7 +67,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/util/LayoutFromFrontMatter.js"),
+          default: require.resolve("./src/util/LayoutFromFrontMatter.tsx"),
         },
         plugins: [`gatsby-remark-images`],
         gatsbyRemarkPlugins: [

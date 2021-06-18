@@ -1,14 +1,14 @@
 import React from "react";
 
 //FIXME: format dates like original
-const PageMeta = ({ date = null, modified = null }) => {
+const PageMeta = ({ date = null }) => {
   return (
-    (date || modified) && (
+    date && (
       <div className="page-meta">
         <p>
           Updated
-          <time dateTime={modified || date} itemProp="dateModified">
-            {modified || date}
+          <time dateTime={date} itemProp="dateModified">
+            {date}
           </time>
         </p>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import PageMeta from "../_includes/page-meta";
-import Default from "./default";
+import Default from "../templates/default";
 
 //FIXME: enable image in page feature
 const Article = ({ pageContext, children }) => (
@@ -17,9 +17,7 @@ const Article = ({ pageContext, children }) => (
                   className="page-feature-image"
                   alt="pageContext.frontmatter.title"
                   itemProp="image"
-                >
-                  {/*{% if page.image.credit %}{% include image-credit.html %}{% endif %}*/}
-                </img>
+                />
               </div>
             </div>
           )}
@@ -31,24 +29,15 @@ const Article = ({ pageContext, children }) => (
         <div className="inner-wrap">
           <div id="content" className="page-content" itemProp="articleBody">
             {children}
+
             <hr />
 
             <footer className="page-footer">
-              {/*
-							{% if page.categories %}{% include page-author.html %}{% endif %}
-							{% if page.share != false %}{% include share-this.html %}{% endif %}
-						*/}
               <PageMeta
                 date={pageContext.frontmatter.date}
                 modified={pageContext.frontmatter.modified}
               />
             </footer>
-
-            {/*
-						<aside>
-							{% if page.comments == true %}{% include comments.html %}{% endif %}
-						</aside>
-						*/}
           </div>
         </div>
       </article>
