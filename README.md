@@ -10,7 +10,8 @@ Gotta love the JAMStack.🦄
 - TypeScriptify the remainder of everything
 - Consolidate into standard JS directories
 - Netlify deployment
-- Fit frontpage on one screen
+- Fix the feed
+- add correct posts
 
 ## Next Steps
 
@@ -20,3 +21,4 @@ Gotta love the JAMStack.🦄
 - Storybook
 - Generate post and project templates
 - react-helmet-async?
+- upgrade gatsby-image
