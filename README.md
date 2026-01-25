@@ -19,7 +19,7 @@ let personal = Personal { name = "Hannah Vivian Shaw"
                         , email = "hvivianshaw 'at' gmail.com"
                         , website = "vivshaw.github.io"
                         , twitter = "@vvvivshaw"
-                        , pgp = "61E55CA77554B474C30F04248F434E3AF84C4482"
+                        , pgp = "1AD2C043CC62805FD666FE9B86A802CADB0AF8CD"
                         }
 
 {- bio and interests -}
